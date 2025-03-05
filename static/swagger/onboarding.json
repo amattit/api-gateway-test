@@ -1,0 +1,1706 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "api-gateway-composer",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/_/cache/sber_profile/info/": {
+      "post": {
+        "tags": [
+          "~ ZSL Cache auto-generated"
+        ],
+        "summary": "Info Route",
+        "operationId": "info_route_api___cache_sber_profile_info__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "title": "Entity Key"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CacheInfoResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/_/cache/sber_profile/invalidate/": {
+      "post": {
+        "tags": [
+          "~ ZSL Cache auto-generated"
+        ],
+        "summary": "Invalidate Route",
+        "operationId": "invalidate_route_api___cache_sber_profile_invalidate__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "title": "Entity Key"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CacheInvalidateResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/_/cache/user_agreements/info/": {
+      "post": {
+        "tags": [
+          "~ ZSL Cache auto-generated"
+        ],
+        "summary": "Info Route",
+        "operationId": "info_route_api___cache_user_agreements_info__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "title": "Entity Key"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CacheInfoResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/_/cache/user_agreements/invalidate/": {
+      "post": {
+        "tags": [
+          "~ ZSL Cache auto-generated"
+        ],
+        "summary": "Invalidate Route",
+        "operationId": "invalidate_route_api___cache_user_agreements_invalidate__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "title": "Entity Key"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CacheInvalidateResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/personalwave": {
+      "post": {
+        "tags": [
+          "v1"
+        ],
+        "summary": "Get Personal Wave",
+        "description": "Ручка позволяет получить персональную волну для пользователя, а так же отправить реакцию на трек",
+        "operationId": "get_personal_wave_api_v1_personalwave_post",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonalWaveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonalWaveResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/v1/artists/{artist_id}/similar": {
+      "get": {
+        "tags": [
+          "Onboarding"
+        ],
+        "summary": "Get Onboarding Artists Similar",
+        "description": "Ручка позволяет производить поиск похожих артистов для онбординга по переданному id артиста.",
+        "operationId": "get_onboarding_artists_similar_api_onboarding_v1_artists__artist_id__similar_get",
+        "parameters": [
+          {
+            "description": "Идентификатор артиста. Значение должно быть строго больше 0.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0,
+              "title": "Artist ID",
+              "description": "Идентификатор артиста. Значение должно быть строго больше 0."
+            },
+            "name": "artist_id",
+            "in": "path"
+          },
+          {
+            "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0,
+              "title": "Limit",
+              "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+              "default": 25
+            },
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingItemsResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/v1/artists/search": {
+      "get": {
+        "tags": [
+          "Onboarding"
+        ],
+        "summary": "Get Onboarding Artists Search",
+        "description": "Ручка позволяет производить поиск артиста для онбординга. Поиск ищет конкретного артиста, без учета похожих артистов.",
+        "operationId": "get_onboarding_artists_search_api_onboarding_v1_artists_search_get",
+        "parameters": [
+          {
+            "description": "Поисковый запрос для поиска артиста.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Query",
+              "description": "Поисковый запрос для поиска артиста."
+            },
+            "name": "query",
+            "in": "query"
+          },
+          {
+            "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0,
+              "title": "Limit",
+              "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+              "default": 10
+            },
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "description": "Смещение относительно первой записи. Значение должно быть равно или больше 0.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0.0,
+              "title": "Offset",
+              "description": "Смещение относительно первой записи. Значение должно быть равно или больше 0.",
+              "default": 0
+            },
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingItemsResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/v1/status": {
+      "get": {
+        "tags": [
+          "Onboarding"
+        ],
+        "summary": "Get Onboarding Status",
+        "description": "Метод позволяет узнать статус пользователя для необходимости пройти онбординг",
+        "operationId": "get_onboarding_status_api_onboarding_v1_status_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingStatusResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/v1/artists": {
+      "get": {
+        "tags": [
+          "Onboarding"
+        ],
+        "summary": "Get Onboarding Artists",
+        "description": "Метод выполняет запрос общего списка артистов для начала онбординга",
+        "operationId": "get_onboarding_artists_api_onboarding_v1_artists_get",
+        "parameters": [
+          {
+            "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0,
+              "title": "Limit",
+              "description": "Максимальное количество возвращаемых записей. Значение должно быть больше 0.",
+              "default": 10
+            },
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "description": "Смещение относительно первой записи. Значение должно быть равно или больше 0.",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0.0,
+              "title": "Offset",
+              "description": "Смещение относительно первой записи. Значение должно быть равно или больше 0.",
+              "default": 0
+            },
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingItemsResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/onboarding/v1/apply": {
+      "post": {
+        "tags": [
+          "Onboarding"
+        ],
+        "summary": "Post Onboarding Apply",
+        "description": "Ручка выполняет фиксацию выбранных пользователем при онбординге артистов",
+        "operationId": "post_onboarding_apply_api_onboarding_v1_apply_post",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistIDsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/v1/refresh": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Обновление авторизационного токена",
+        "operationId": "refresh_user_token_api_auth_v1_refresh_post",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_refresh_user_token_api_auth_v1_refresh_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SingleResponse_RefreshTokenResponse_"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/v1/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Выход из профиля пользователя",
+        "operationId": "logout_api_auth_v1_logout_post",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "X-Api-Key"
+            },
+            "name": "x-api-key",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{unhandled_route}": {
+      "get": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_GET",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Get"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_PUT",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Put"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_POST",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Post"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_DELETE",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Delete"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_OPTIONS",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Options"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "head": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_HEAD",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Head"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_PATCH",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Patch"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "trace": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_TRACE",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Unhandled Route Handler Trace"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "connect": {
+        "tags": [
+          "~ ZSL Not found routes"
+        ],
+        "summary": "Unhandled Route Handler",
+        "description": "Отлавливает все несматченные запросы по указанному http методу",
+        "operationId": "unhandled_route_handler_CONNECT",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Unhandled Route Handler Connect",
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ArtistIDsRequest": {
+        "properties": {
+          "artist_ids": {
+            "items": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0
+            },
+            "type": "array",
+            "maxItems": 20,
+            "minItems": 5,
+            "title": "Artist Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "artist_ids"
+        ],
+        "title": "ArtistIDsRequest"
+      },
+      "Body_refresh_user_token_api_auth_v1_refresh_post": {
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "title": "Refresh Token"
+          }
+        },
+        "type": "object",
+        "required": [
+          "refresh_token"
+        ],
+        "title": "Body_refresh_user_token_api_auth_v1_refresh_post"
+      },
+      "CacheInfoResponse": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "ttl": {
+            "type": "integer",
+            "title": "Ttl"
+          },
+          "data": {
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "version",
+          "ttl",
+          "data"
+        ],
+        "title": "CacheInfoResponse"
+      },
+      "CacheInvalidateResponse": {
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "key",
+          "version"
+        ],
+        "title": "CacheInvalidateResponse"
+      },
+      "EmptyResponse": {
+        "properties": {},
+        "type": "object",
+        "title": "EmptyResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message",
+          "code"
+        ],
+        "title": "ErrorResponse",
+        "description": "Стандартный формат ответа от сервиса в случае ошибки\n\nИспользуется не только в fastapi, но и ApiRequestMaker, поэтому класс находится на глобально уровне"
+      },
+      "Genre": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GenreLevel"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "title": "Genre"
+      },
+      "GenreLevel": {
+        "type": "string",
+        "enum": [
+          "LVL1",
+          "LVL2",
+          "LVL3"
+        ],
+        "title": "GenreLevel",
+        "description": "An enumeration."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Items": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title"
+        ],
+        "title": "Items"
+      },
+      "Language": {
+        "type": "string",
+        "enum": [
+          "russian",
+          "foreign"
+        ],
+        "title": "Language",
+        "description": "An enumeration."
+      },
+      "ListenedTrack": {
+        "properties": {
+          "track_id": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Track Id"
+          },
+          "is_skipped": {
+            "type": "boolean",
+            "title": "Is Skipped",
+            "default": false
+          },
+          "play_duration": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Play Duration"
+          },
+          "track_duration": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Track Duration"
+          },
+          "user_reaction": {
+            "$ref": "#/components/schemas/UserReaction"
+          }
+        },
+        "type": "object",
+        "required": [
+          "track_id",
+          "play_duration",
+          "track_duration"
+        ],
+        "title": "ListenedTrack"
+      },
+      "Mood": {
+        "properties": {
+          "energy": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Energy",
+            "default": 0.5
+          },
+          "fun": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Fun",
+            "default": 0.5
+          }
+        },
+        "type": "object",
+        "title": "Mood"
+      },
+      "OnboardingItemsResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Items"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "OnboardingItemsResponse"
+      },
+      "OnboardingStatusResponse": {
+        "properties": {
+          "need_onboarding": {
+            "type": "boolean",
+            "title": "Need Onboarding"
+          }
+        },
+        "type": "object",
+        "required": [
+          "need_onboarding"
+        ],
+        "title": "OnboardingStatusResponse"
+      },
+      "PersonalWaveRequest": {
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 1
+          },
+          "settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PersonalWaveSettings"
+              }
+            ],
+            "title": "Settings",
+            "default": {
+              "filter_explicit": false,
+              "genres": [],
+              "mood": {
+                "energy": 0.5,
+                "fun": 0.5
+              }
+            }
+          },
+          "listened_track": {
+            "$ref": "#/components/schemas/ListenedTrack"
+          }
+        },
+        "type": "object",
+        "title": "PersonalWaveRequest"
+      },
+      "PersonalWaveResponse": {
+        "properties": {
+          "track_ids": {
+            "items": {
+              "type": "integer",
+              "exclusiveMinimum": 0.0
+            },
+            "type": "array",
+            "title": "Track Ids"
+          }
+        },
+        "type": "object",
+        "required": [
+          "track_ids"
+        ],
+        "title": "PersonalWaveResponse"
+      },
+      "PersonalWaveSettings": {
+        "properties": {
+          "diversity": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Diversity"
+          },
+          "filter_explicit": {
+            "type": "boolean",
+            "title": "Filter Explicit",
+            "default": false
+          },
+          "genres": {
+            "items": {
+              "$ref": "#/components/schemas/Genre"
+            },
+            "type": "array",
+            "title": "Genres",
+            "default": []
+          },
+          "language": {
+            "$ref": "#/components/schemas/Language"
+          },
+          "mood": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Mood"
+              }
+            ],
+            "title": "Mood",
+            "default": {
+              "energy": 0.5,
+              "fun": 0.5
+            }
+          },
+          "popular": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Popular"
+          },
+          "vocal": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Vocal"
+          }
+        },
+        "type": "object",
+        "title": "PersonalWaveSettings"
+      },
+      "RefreshTokenResponse": {
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "title": "Access Token"
+          },
+          "access_token_expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Access Token Expires At"
+          },
+          "refresh_token": {
+            "type": "string",
+            "title": "Refresh Token"
+          },
+          "refresh_token_expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Refresh Token Expires At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access_token",
+          "access_token_expires_at"
+        ],
+        "title": "RefreshTokenResponse"
+      },
+      "SingleResponse_RefreshTokenResponse_": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RefreshTokenResponse"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data"
+        ],
+        "title": "SingleResponse[RefreshTokenResponse]"
+      },
+      "UserReaction": {
+        "type": "string",
+        "enum": [
+          "LIKED",
+          "DISLIKED"
+        ],
+        "title": "UserReaction",
+        "description": "An enumeration."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

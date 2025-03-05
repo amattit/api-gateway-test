@@ -5,13 +5,12 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Звук API',
+  tagline: 'Экспансия должна быть приятной',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -22,8 +21,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'zvuk', // Usually your GitHub org/user name.
+  projectName: 'api-gateway', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -32,8 +31,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru',
+    locales: ['ru'],
   },
 
   presets: [
@@ -146,6 +145,21 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+    plugins: [
+      [
+        '@scalar/docusaurus',
+        {
+          label: 'Scalar',
+          route: '/scalar',
+          configuration: {
+            spec: {
+              url: '/swagger/onboarding.json',
+            },
+          },
+        },
+      ],
+    ],
 };
 
 export default config;
