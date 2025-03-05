@@ -150,8 +150,8 @@ const config = {
       [
         '@scalar/docusaurus',
         {
-          label: 'Scalar',
-          route: '/scalar',
+          label: 'API',
+          route: '/api',
           configuration: {
             spec: {
               url: '/swagger/onboarding.json',
